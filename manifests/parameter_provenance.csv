@@ -1,0 +1,47 @@
+model,experiment,parameter,actual_value,evidence_file,evidence_location,execution_date,verification_status
+RETFound,historical_BRSET_source,batch_size,24,internal:r28_retfound_source_parameters_20261111.json,"checkpoint_configs[seed06,seed08]",UNKNOWN,VERIFIED_SAVED_CHECKPOINT_CONFIG
+RETFound,historical_BRSET_source,accum_iter,1,internal:r28_retfound_source_parameters_20261111.json,"checkpoint_configs[seed06,seed08]",UNKNOWN,VERIFIED_SAVED_CHECKPOINT_CONFIG
+RETFound,historical_BRSET_source,effective_batch,24,internal:r28_retfound_source_parameters_20261111.json,checkpoint_configs plus source formula,UNKNOWN,VERIFIED_SAVED_CHECKPOINT_CONFIG
+RETFound,historical_BRSET_source,warmup_epochs,5,internal:r28_retfound_source_parameters_20261111.json,"checkpoint_configs[seed06,seed08]",UNKNOWN,VERIFIED_SAVED_CHECKPOINT_CONFIG
+RETFound,historical_BRSET_source,max_epochs,30,internal:r28_retfound_source_parameters_20261111.json,"checkpoint_configs[seed06,seed08]",UNKNOWN,VERIFIED_SAVED_CHECKPOINT_CONFIG
+RETFound,historical_BRSET_source,patience,6,internal:r28_retfound_source_parameters_20261111.json,"checkpoint_configs[seed06,seed08]",UNKNOWN,VERIFIED_SAVED_CHECKPOINT_CONFIG
+RETFound,historical_BRSET_source,base_learning_rate,0.00046875,code/historical/phase1a1_train_eval.py,lines 495-497 and saved batch 24,UNKNOWN,VERIFIED_EXECUTED_SOURCE_AND_RECORD
+RETFound,historical_BRSET_source,learning_rate_formula,5e-3 * effective_batch / 256,code/historical/phase1a1_train_eval.py,lines 495-497,UNKNOWN,VERIFIED_EXECUTED_SOURCE_AND_RECORD
+RETFound,historical_BRSET_source,optimizer,AdamW,code/historical/phase1a1_train_eval.py,line 497,UNKNOWN,VERIFIED_EXECUTED_SOURCE_AND_RECORD
+RETFound,historical_BRSET_source,class_weight_unit,training images,code/historical/phase1a1_train_eval.py,lines 499-501,UNKNOWN,VERIFIED_EXECUTED_SOURCE_AND_RECORD
+RETFound,historical_BRSET_source,negative_training_images,1392,code/historical/phase1a1_train_eval.py,source split audit and checkpoint review,UNKNOWN,VERIFIED_EXECUTED_SOURCE_AND_RECORD
+RETFound,historical_BRSET_source,positive_training_images,410,code/historical/phase1a1_train_eval.py,source split audit and checkpoint review,UNKNOWN,VERIFIED_EXECUTED_SOURCE_AND_RECORD
+RETFound,historical_BRSET_source,class_weights,"[1.0,3.395121951219512]",code/historical/phase1a1_train_eval.py,lines 499-501,UNKNOWN,VERIFIED_EXECUTED_SOURCE_AND_RECORD
+RETFound,historical_BRSET_source,checkpoint_selection,BRSET validation patient AUROC,code/historical/phase1a1_train_eval.py,lines 530-555,UNKNOWN,VERIFIED_EXECUTED_SOURCE_AND_RECORD
+RETFound,historical_BRSET_source_seed07,saved_config,UNKNOWN,internal:r28_retfound_source_parameters_20261111.json,checkpoint_seed07,UNKNOWN,NOT_RECOVERED
+RETFound,historical_repository,commit,UNKNOWN,internal:r28_retfound_source_parameters_20261111.json,historical_repo_commit,UNKNOWN,NOT_RECOVERED
+VisionFM,historical_BRSET_frozen_decoder,feature,last four CLS concatenated,code/historical/phase2a1_visionfm_cpu.py,cell 135 and phase2a1 code,2026-09-18,VERIFIED_EXECUTED_NOTEBOOK_CODE
+VisionFM,historical_BRSET_frozen_decoder,feature_dimension,3072,code/historical/phase2a1_visionfm_cpu.py,cell 135 executed output,2026-09-18,VERIFIED_EXECUTED_NOTEBOOK_CODE
+VisionFM,historical_BRSET_frozen_decoder,head,"BatchNorm1d,3072-1536-768-1,GELU,dropout0.1",code/historical/phase2a1_visionfm_cpu.py,lines 160-205,2026-09-18,VERIFIED_EXECUTED_NOTEBOOK_CODE
+VisionFM,historical_BRSET_frozen_decoder,head_trainable_parameters,5907457,code/historical/phase2a1_visionfm_cpu.py,source decoder audit,2026-09-18,VERIFIED_EXECUTED_NOTEBOOK_CODE
+VisionFM,historical_BRSET_frozen_decoder,source_seeds,20267001;20267002;20267003,code/historical/phase2a1_visionfm_cpu.py,executed notebook and result files,2026-09-18,VERIFIED_EXECUTED_NOTEBOOK_CODE
+VisionFM,historical_BRSET_frozen_decoder,optimizer,AdamW,code/historical/phase2a1_visionfm_cpu.py,lines 777-784,2026-09-18,VERIFIED_EXECUTED_NOTEBOOK_CODE
+VisionFM,historical_BRSET_frozen_decoder,learning_rate,0.001,code/historical/phase2a1_visionfm_cpu.py,line 61,2026-09-18,VERIFIED_EXECUTED_NOTEBOOK_CODE
+VisionFM,historical_BRSET_frozen_decoder,weight_decay,0.05,code/historical/phase2a1_visionfm_cpu.py,line 63,2026-09-18,VERIFIED_EXECUTED_NOTEBOOK_CODE
+VisionFM,historical_BRSET_frozen_decoder,batch_size,256,code/historical/phase2a1_visionfm_cpu.py,line 58,2026-09-18,VERIFIED_EXECUTED_NOTEBOOK_CODE
+VisionFM,historical_BRSET_frozen_decoder,max_epochs,100,code/historical/phase2a1_visionfm_cpu.py,line 55,2026-09-18,VERIFIED_EXECUTED_NOTEBOOK_CODE
+VisionFM,historical_BRSET_frozen_decoder,patience,15,code/historical/phase2a1_visionfm_cpu.py,line 56,2026-09-18,VERIFIED_EXECUTED_NOTEBOOK_CODE
+VisionFM,historical_BRSET_frozen_decoder,schedule,cosine,code/historical/phase2a1_visionfm_cpu.py,lines 786-790,2026-09-18,VERIFIED_EXECUTED_NOTEBOOK_CODE
+VisionFM,historical_BRSET_frozen_decoder,checkpoint_selection,BRSET validation patient AUROC,code/historical/phase2a1_visionfm_cpu.py,training loop,2026-09-18,VERIFIED_EXECUTED_NOTEBOOK_CODE
+RETFound,revision_R1-1_frozen_MLP,official_weight_sha256,e1e4f66a1b792eeb6e2efaf158f33be35c8255f36b3d17ed67cd5129da246485,code/revision/run_r11_matched_source_20261112.py,EXPECTED and smoke result,2026-11-12,VERIFIED_REVISION_EXECUTION
+RETFound,revision_R1-1_frozen_MLP,encoder,frozen official RETFound CLS after norm,code/revision/run_r11_matched_source_20261112.py,encoder function,2026-11-12,VERIFIED_REVISION_EXECUTION
+RETFound,revision_R1-1_frozen_MLP,feature_dimension,1024,code/revision/run_r11_matched_source_20261112.py,encoder forward output,2026-11-12,VERIFIED_REVISION_EXECUTION
+RETFound,revision_R1-1_frozen_MLP,head,"BatchNorm1d,1024-512-256-1,GELU,dropout0.1",code/revision/run_r11_matched_source_20261112.py,Head class,2026-11-12,VERIFIED_REVISION_EXECUTION
+RETFound,revision_R1-1_frozen_MLP,head_trainable_parameters,658433,code/revision/run_r11_matched_source_20261112.py,train assertion,2026-11-12,VERIFIED_REVISION_EXECUTION
+RETFound,revision_R1-1_frozen_MLP,source_seeds,20260906;20260907;20260908,code/revision/run_r11_matched_source_20261112.py,SEEDS,2026-11-12,VERIFIED_REVISION_EXECUTION
+RETFound,revision_R1-1_frozen_MLP,learning_rate,0.001,code/revision/run_r11_matched_source_20261112.py,train function AdamW,2026-11-12,VERIFIED_REVISION_EXECUTION
+RETFound,revision_R1-1_frozen_MLP,weight_decay,0.05,code/revision/run_r11_matched_source_20261112.py,train function AdamW,2026-11-12,VERIFIED_REVISION_EXECUTION
+RETFound,revision_R1-1_frozen_MLP,batch_size,256,code/revision/run_r11_matched_source_20261112.py,train DataLoader,2026-11-12,VERIFIED_REVISION_EXECUTION
+RETFound,revision_R1-1_frozen_MLP,max_epochs,100,code/revision/run_r11_matched_source_20261112.py,train loop,2026-11-12,VERIFIED_REVISION_EXECUTION
+RETFound,revision_R1-1_frozen_MLP,patience,15,code/revision/run_r11_matched_source_20261112.py,train early stop,2026-11-12,VERIFIED_REVISION_EXECUTION
+RETFound,revision_R1-1_frozen_MLP,schedule,cosine,code/revision/run_r11_matched_source_20261112.py,train scheduler,2026-11-12,VERIFIED_REVISION_EXECUTION
+RETFound,revision_R1-1_frozen_MLP,checkpoint_selection,BRSET validation patient max-image AUROC,code/revision/run_r11_matched_source_20261112.py,train selection,2026-11-12,VERIFIED_REVISION_EXECUTION
+RETFound,revision_R1-1_frozen_MLP,source_test_patients,202,code/revision/run_r11_matched_source_20261112.py,locked manifest and test output,2026-11-12,VERIFIED_REVISION_EXECUTION
+RETFound,revision_R1-1_frozen_MLP,mbrset_test_patients,400,code/revision/run_r11_matched_source_20261112.py,locked manifest and external output,2026-11-12,VERIFIED_REVISION_EXECUTION
+both,revision_R2-6,adaptation_validation_calibration_test,100/200/200/400,internal:R26_FINAL_CLINICAL_EVIDENCE_2026-11-11.md,role audit,2026-11-11,VERIFIED_REVISION_PROTOCOL
+both,historical_calibration,original_fit_objects,UNKNOWN,internal:R23_CALIBRATION_MAPPING_RESOLUTION_2026-11-08.md,fit object recovery,UNKNOWN,NOT_RECOVERED

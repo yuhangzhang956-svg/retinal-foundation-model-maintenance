@@ -1,0 +1,20 @@
+# Defence in depth; the release audit checks actual contents.
+.git/
+.env
+*.pth
+*.pt
+*.ckpt
+*.bin
+*.safetensors
+*.jpg
+*.jpeg
+*.png
+*.tif
+*.tiff
+*.zip
+*.npz
+*.npy
+*PRIVATE*
+*patient_predictions*
+__pycache__/
+.ipynb_checkpoints/

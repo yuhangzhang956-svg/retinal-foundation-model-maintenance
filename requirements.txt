@@ -1,0 +1,11 @@
+# Observed local revision versions, not a solved cross-platform lock.
+numpy==2.5.3
+pandas==3.0.6
+scipy==1.18.1
+scikit-learn==1.9.1
+Pillow==12.3.0
+matplotlib==3.11.2
+timm==0.9.2
+torch==2.5.1
+torchvision==0.20.1
+# Install torch and torchvision from a platform-appropriate CPU/CUDA wheel source.

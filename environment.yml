@@ -1,0 +1,9 @@
+# Optional conda template, not itself tested. requirements.txt was installed and tested
+# in a clean isolated Python 3.12.14 CPU environment; see manifests/clean_environment_test_summary.json.
+name: retinal-maintenance
+channels: [conda-forge]
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - -r requirements.txt

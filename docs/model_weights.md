@@ -1,0 +1,11 @@
+# Model weight and third-party code access
+
+No foundation or trained weights are bundled. Obtain RETFound official natureCFP from the owner's gated page https://huggingface.co/YukunZhou/RETFound_mae_natureCFP after accepting its terms. The locally verified file was RETFound_mae_natureCFP.pth, 3,952,489,221 bytes, SHA256 e1e4f66a1b792eeb6e2efaf158f33be35c8255f36b3d17ed67cd5129da246485. A hash identifies bytes; it does not grant redistribution rights.
+
+VisionFM official implementation and Fundus weight instructions are at https://github.com/ABILab-CUHK/VisionFM . The expected file is VFM_Fundus_weights.pth. Its complete SHA256 was not recovered in this project, so it is UNKNOWN here.
+
+RETFound and VisionFM upstream code repositories display CC BY-NC 4.0 licences. This repository does not copy their vendor code. Historical source, LoRA, local-unfreezing and full-finetuning checkpoints are excluded because redistribution permission has not been established.
+
+The *revision-period local checkout* of [RETFound](https://github.com/rmaphoh/RETFound) is commit `ae9a9ecf37857cf47b8aa9f87cd6f710d75db287`; the *revision-period local checkout* of [VisionFM](https://github.com/ABILab-CUHK/VisionFM) is commit `648ab0895f8e80e2c937f658bd2f1629ea6d27e7`. Both were checked with `git rev-parse HEAD` against the local repositories and their origin URLs. Tracked files were clean at audit time. These commits **do not establish the commits used in the original Colab executions**, which remain unrecovered. See `manifests/vendor_provenance.csv`. Obtain the repositories from their upstream owners, review each upstream licence and weight terms, and install only in an authorised local environment. No `vendor` modules are bundled here, so scripts importing them are not runnable from this repository alone. The upstream code licences do not automatically license study code, images, trained weights or patient data.
+
+For the revision R1-1 script, set the four environment variables RETINAL_PROJECT_ROOT, RETFOUND_OFFICIAL_WEIGHT, BRSET_LICENSED_ZIP and MBRSET_LICENSED_ZIP to authorised local paths. The script requires a local approved copy of RETFound implementation and uses the provided official checkpoint. Never place tokens, private access links or weights in a public repository.
